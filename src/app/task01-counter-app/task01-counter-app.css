@@ -1,0 +1,23 @@
+.btn {
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    background: rgb(229, 220, 220);
+    color: black;
+}
+
+.btn:hover {
+    border: 1px solid   ;
+}
+
+.displayNum {
+    background-color: gray;
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}

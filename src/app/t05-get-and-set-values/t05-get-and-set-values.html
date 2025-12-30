@@ -1,0 +1,25 @@
+<h1>t05-get-and-set-values works!</h1>
+
+
+<div>
+    <h1>User name is : {{displayName}}</h1>
+</div>
+
+<div>
+    <input type="text" placeholder="Enter user name" value="{{name}}" (input)="getName($event)"> <br><br>
+
+    <button (click)="showName()">Get Value</button> <br><br>
+
+    <button (click)="setName()">Set Value</button>
+</div>
+
+<hr>
+
+<div>
+    <h1>Email : {{email}}</h1>
+
+    <input value="{{email}}" type="text" name="" id="" #emailField>
+
+    <button (click)="getEmail(emailField.value)">Get Email</button>
+    <button (click)="setEmail()">Set Email</button>
+</div>

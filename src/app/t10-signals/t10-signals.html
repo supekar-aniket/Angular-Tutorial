@@ -1,0 +1,30 @@
+<p>t10-signals works!</p>
+
+<h3>Signals is wrapper arround the variables.That gives a signal when values change.</h3>
+
+<p>X is a normal variable and count is a signal.</p>
+
+<p>See updated values in console.</p>
+
+<h3>Value of x is : {{x}}</h3>
+<h3>Value of count is : {{count()}}</h3>
+
+<button (click)="updateValue()">Update Value</button>
+
+<summary>Only count value is display in console because count is s signal.And signals are the effect() only tracks signals, not normal properties.In the combined effect, counts change forces the effect to re-run, so x new value reactive variables in angular.
+
+</summary>
+
+<hr>
+
+<button (click)="changeValue('dec')">Decrement</button>
+<h3>Value of count is : {{count()}}</h3>
+<button (click)="changeValue('inc')">Increment</button>
+<hr>
+
+<h1>Computed Signals</h1>
+<p>Computed signal are read-only signals that derive their value from other signals. </p>
+
+<h3>{{ total() }}</h3>
+<button (click)="showData()">Show Data</button>
+

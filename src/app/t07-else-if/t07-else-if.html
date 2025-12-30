@@ -1,0 +1,22 @@
+<p>t07-else-if works!</p>
+
+<input
+  type="number"
+  (input)="handleInput($event)"
+  placeholder="Enter number 1-5" />
+
+<br><br>
+
+@if (inputValue == 1) {
+  <div (click)="handleInput(1)" style="width:100px; height:100px; background:green;"></div>
+} @else if (inputValue == 2) {
+  <div (click)="handleInput(2)" style="width:100px; height:100px; background:red;"></div>
+} @else if (inputValue == 3) {
+  <div (click)="handleInput(3)" style="width:100px; height:100px; background:blue;"></div>
+} @else if (inputValue == 4) {
+  <div (click)="handleInput(4)" style="width:100px; height:100px; background:orange;"></div>
+} @else if (inputValue == 5) {
+  <div (click)="handleInput(5)" style="width:100px; height:100px; background:yellow;"></div>
+} @else {
+  <div (click)="handleInput(0)" style="width:100px; height:100px; background:black;"></div>
+}

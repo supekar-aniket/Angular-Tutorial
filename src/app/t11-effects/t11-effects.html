@@ -1,0 +1,18 @@
+<p>t11-effects works!</p>
+
+<h1>{{userName()}}</h1>
+<button (click)="userName.set('Arpita');">Update Value</button>
+
+<hr>
+<h1>Constructor</h1>
+<ul>
+  <li>Runs only one time when component is created</li>
+  <li>Used for initialization and dependency injection</li>
+</ul>
+
+<h1>Effect</h1>
+<ul>
+    <li>Runs every time dependent signal changes</li>
+    <li>React to signal changes (logging, API calls, updating UI)</li>
+</ul> 
+

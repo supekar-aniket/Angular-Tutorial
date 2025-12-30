@@ -1,0 +1,60 @@
+<p>t14-routing works!</p>
+
+<ul>
+  <li><a routerLink="home">Home</a></li>
+  <li><a routerLink="contact">Contact Us</a></li>
+  <li><a routerLink="about">About</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+<hr>
+
+<div>
+  <h1>Routing</h1>
+
+  <ul>
+    <li>
+      Routing in Angular allows you to build Single Page Applications (SPA)
+      where navigation between different pages happens without reloading the whole page.
+    </li>
+    <li>
+      Instead of loading a new HTML file, Angular dynamically loads components
+      based on the URL.
+    </li>
+    <li>You can load multiple pages (Home, About, Login, Dashboard, etc.)</li>
+    <li>Faster navigation (no page reload)</li>
+    <li>Clean URLs (/home, /login)</li>
+  </ul>
+
+  <h2>How to use?</h2>
+
+  <ol>
+    <li>
+      Register all router pages in <b>app.routes.ts</b> file
+    </li>
+    <textarea readonly rows="5" cols="60">
+        export const routes: Routes = [
+        { path: 'about', component: About },
+        { path: 'login', component: Login }
+        ];
+      </textarea>
+
+      <li>Import <b>RouterLink</b> and <b>RouterOutlet</b> in routing.ts file</li>
+      <textarea cols="60" rows="2">
+         imports: [RouterLink,RouterOutlet,],
+      </textarea>
+
+      <li>write tag <b>router-outlet</b> in html file</li>
+      <textarea cols="60" rows="7">
+         <ul>
+            <li><a routerLink="/login">Login</a></li>
+            <li><a routerLink="/contact">Contact Us</a></li>
+            <li><a routerLink="/about">About</a></li>
+        </ul>
+
+            <router-outlet></router-outlet>
+      </textarea>
+  </ol>
+</div>
+
+<hr>

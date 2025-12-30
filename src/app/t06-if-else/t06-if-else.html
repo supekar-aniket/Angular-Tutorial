@@ -1,0 +1,28 @@
+<p>t06-if-else works!</p>
+
+<div style="margin: auto; padding: 10px; display: flex; gap: 10px;">
+    <button (click)="show()">Show Box</button>
+    <button (click)="hide()">Hide Box</button>
+
+    <button (click)="toggle()">{{display? 'Hide':'Show'}}</button>
+</div>
+
+
+@if(display){
+<div style="width: 100px; height: 100px; background: aqua;">
+
+</div>
+}
+
+<br><br>
+<hr>
+
+@if(changeColor) {
+  <div style="width:100px; height:100px; background:red;">
+  </div>
+} @else {
+  <div style="width:100px; height:100px; background:black;">
+  </div>
+} <br><br>
+
+<button (click)="toggleDiv()">{{changeColor? 'Change Black' : 'Change Red'}}</button>

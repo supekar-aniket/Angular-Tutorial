@@ -1,0 +1,73 @@
+<p>t13-directives works!</p>
+
+<!-- When condition true it show Heading tag -->
+ <h1>*ngIf</h1>
+<h1 *ngIf="show" >
+    Heading Tag
+</h1>
+
+<hr>
+
+<h1>*ngFor</h1>
+<ul>
+    <li *ngFor="let x of student">
+        {{x}}
+    </li>
+</ul>
+<hr>
+
+<ul>
+    <li *ngFor="let x of studentData">
+        {{x.name}},
+        {{x.age}},
+        {{x.email}}
+    </li>
+</ul>
+<hr>
+
+<h1>*ngSwitch</h1>
+
+<div [ngSwitch]="color">
+    <h3 *ngSwitchCase="'red'" style="color: red;">Red Color</h3>
+    <h3 *ngSwitchCase="'yellow'" style="color: yellow;">Yellow Color</h3>
+    <h3 *ngSwitchCase="'green'" style="color: green;">Green Color</h3>
+    <h3 *ngSwitchCase="'gray'" style="color: gray;">Gray Color</h3>
+    <h3 *ngSwitchCase="'bisque'" style="color: bisque;">bisque Color</h3>
+    <h3 *ngSwitchDefault="black" style="color: black;">No Color Match</h3>
+</div>
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('gray')">Gray</button>
+<button (click)="changeColor('bisque')">Bisque</button>
+<hr>
+<div>
+    <h1>Directives</h1>
+    <ul>
+        <li>Directives are classes that add additional behavior to elements in your Angular applications.</li>
+        <li>A feature that help you to provide more power to DOM element.</li>
+    </ul>
+
+    <h2>Types</h2>
+    <ol>
+        <li><strong>Component Directives</strong>
+            <ul>
+                <li>The most common type of Direective.</li>
+                <li>Used in component template file.</li>
+            </ul>
+        </li>
+        <li><strong>Structural Directives</strong>
+            <ul>
+                <li>Change the structure of the DOM by adding removing or manipulating element.</li>
+            </ul>
+        </li>
+        <li><strong>Attribute Directives</strong>
+            <ul>
+                <li>
+                    Modify the appearence or behaviour of an existing element.
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>
+<hr>    

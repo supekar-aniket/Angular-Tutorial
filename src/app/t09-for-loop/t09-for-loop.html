@@ -1,0 +1,51 @@
+<p>t09-for-loop works!</p>
+
+<h2>Arrays values display in normal way</h2>
+
+<h3>{{user[0]}}</h3>
+<h3>{{user[1]}}</h3>
+<h3>{{user[2]}}</h3>
+<h3>{{user[3]}}</h3>
+<hr>
+
+<h2>Arrays values display using For loop</h2>
+@for(item of user; track item){
+    <h3>{{item}}</h3>
+}
+<hr>
+
+<h2>Display multiple values of single entity using for loop</h2>
+@for(student of students; track student;let  id = $index){
+    <h4>
+        <span>{{id}}</span>
+        <span>{{student.name}}</span>
+        <span>{{student.age}}</span>
+        <span>{{student.email}}</span>
+        <button (click)="getName(student.name)">Get Name</button>
+    </h4>
+}
+<hr>
+
+<h1>Contexual Variables in For loop</h1>
+
+@for(user of user;track user){
+
+    <!-- display the current index -->
+    <h3>Index no. {{$index}} and user is <b>{{user}}</b></h3>
+
+    <!-- Its return true when arrays first value apperes -->
+    <!-- <h2>{{$first}}</h2> -->
+
+    <!-- Its return true when arrays last value apperes -->
+    <!-- <h2>{{$last}}</h2> -->
+
+    <!-- Its return total values in the arrays -->
+    <!-- <h2>{{$count}}</h2> -->
+
+    <!-- Values true when index values are even -->
+    <!-- <h2>{{$even}}</h2> -->
+
+    <!-- Values true when index values are odd -->
+    <!-- <h2>{{$odd }}</h2> -->
+    
+}

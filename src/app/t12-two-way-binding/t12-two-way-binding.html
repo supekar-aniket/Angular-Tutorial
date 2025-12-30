@@ -1,0 +1,30 @@
+<p>t12-two-way-binding works!</p>
+
+<!-- This is old  -->
+<!-- <input type="text" (input)="bindData($event)" placeholder="Enter name">
+
+<h1>{{name}}</h1> -->
+
+<!-- Two way binding -->
+<!-- Syntax is <input [(ngModel)]="username" />  -->
+ <!-- [( )] = banana in a box → two-way binding -->
+<input type="text" [(ngModel)]="name" placeholder="Enter name">
+
+<h1>{{name}}</h1>
+
+<summary>
+    Two-way binding in Angular means UI updates the variable and the variable updates the UI — both stay in sync automatically.
+</summary>
+
+<pre>
+  < input [(ngModel)]="username" />
+</pre>
+<pre>
+    Here:
+
+( ) = event binding (listens for changes)
+
+[ ] = property binding (sets value to UI)
+
+[( )] = banana in a box → two-way binding
+</pre>

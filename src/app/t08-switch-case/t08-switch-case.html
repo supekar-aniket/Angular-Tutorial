@@ -1,0 +1,22 @@
+<p>t08-switch-case works!</p>
+
+<div style="display: flex; gap: 10px;">
+  <button (click)="setMode('view')">View</button>
+  <button (click)="setMode('edit')">Edit</button>
+  <button (click)="setMode('delete')">Delete</button>
+</div>
+
+@switch (mode) {
+  @case ('view') {
+    <p>You're in **View** mode.</p>
+  }
+  @case ('edit') {
+    <p>You're in **Edit** mode.</p>
+  }
+  @case ('delete') {
+    <p>You're in **Delete** mode.</p>
+  }
+  @default {
+    <p>Unknown mode. Default fallback.</p>
+  }
+}

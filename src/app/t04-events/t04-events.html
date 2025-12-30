@@ -1,0 +1,17 @@
+<p>t04-events works!</p>
+
+<button class="Btn" name="eventBtn" (click)="handleEvents($event)">Click Event</button>
+<br><br>
+
+<div    (mouseenter)="mouseEnter($event)"
+        (mouseleave)="mouseLeave($event)"
+        (click)="clickEvent($event)"
+    style="background-color: gray; width: 100px; height: 100px;">
+
+</div> <br><br>
+
+<div >
+    <input (input)="inputEvent($event)"
+     (focus)="focusEvent($event)"
+     type="text" name="inputValue">
+</div>
