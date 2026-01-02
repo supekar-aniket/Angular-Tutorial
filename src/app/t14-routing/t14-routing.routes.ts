@@ -1,19 +1,20 @@
 import { Routes } from '@angular/router';
 
-import { T14Routing } from './t14-routing';
-import { Home } from './home/home';
-import { About } from './about/about';
-import { Contact } from './contact/contact';
-
-export const t14Routes: Routes = [
+export const T14_ROUTES: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 't14',
-    component: T14Routing,
-    children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: Home },
-      { path: 'about', component: About },
-      { path: 'contact', component: Contact }
-    ]
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home').then(m => m.Home)
+  },
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./about/about').then(m => m.About)
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./contact/contact').then(m => m.Contact)
   }
 ];

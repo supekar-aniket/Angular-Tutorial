@@ -1,20 +1,107 @@
 import { Routes } from '@angular/router';
 
-import { T14Routing } from './t14-routing/t14-routing';
-import { Home } from './t14-routing/home/home';
-import { About } from './t14-routing/about/about';
-import { Contact, } from './t14-routing/contact/contact';
-
 export const routes: Routes = [
+  { path: '', redirectTo: 't01', pathMatch: 'full' },
+
+  {
+    path: 't01',
+    loadComponent: () =>
+      import('./t01-interpolation/t01-interpolation')
+        .then(m => m.T01Interpolation)
+  },
+  {
+    path: 't02',
+    loadComponent: () =>
+      import('./t02-function-call/t02-function-call')
+        .then(m => m.T02FunctionCall)
+  },
+  {
+    path: 't03',
+    loadComponent: () =>
+      import('./t03-data-type/t03-data-type')
+        .then(m => m.T03DataType)
+  },
+  {
+    path:'t04',
+    loadComponent: () =>
+      import('./t04-events/t04-events')
+        .then(m => m.T04Events)
+  },
+  {
+    path:'t05',
+    loadComponent: () =>
+      import('./t05-get-and-set-values/t05-get-and-set-values')
+      .then(m => m.T05GetAndSetValues)
+  },
+  {
+    path:'t06',
+    loadComponent:() =>
+      import('./t06-if-else/t06-if-else')
+      .then(m => m.T06IfElse)
+  },
+  {
+    path:'t07',
+    loadComponent:() => 
+      import('./t07-else-if/t07-else-if')
+      .then(m => m.T07ElseIf)
+  },
+  {
+    path:'t08',
+    loadComponent:() =>
+      import('./t08-switch-case/t08-switch-case')
+      .then(m => m.T08SwitchCase)
+  },
+  {
+    path:'t09',
+    loadComponent:()=>
+      import('./t09-for-loop/t09-for-loop')
+      .then(m => m.T09ForLoop)
+  },
+  {
+    path:'t10',
+    loadComponent:()=>
+      import('./t10-signals/t10-signals')
+      .then(m => m.T10Signals)
+  },
+  {
+    path:'t11',
+    loadComponent:()=>
+      import('./t11-effects/t11-effects')
+      .then(m => m.T11Effects)
+  },
+  {
+    path:'t12',
+    loadComponent:()=>
+      import('./t12-two-way-binding/t12-two-way-binding')
+      .then(m => m.T12TwoWayBinding)
+  },
+  {
+    path: 't13',
+    loadComponent: () =>
+      import('./t13-directives/t13-directives')
+        .then(m => m.T13Directives)
+  },
   {
     path: 't14',
-    component: T14Routing,
-    children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: Home },
-      { path: 'about', component: About },
-      { path: 'contact', component: Contact }
-    ]
+    loadComponent: () =>
+      import('./t14-routing/t14-routing')
+        .then(m => m.T14Routing),
+    loadChildren: () =>
+      import('./t14-routing/t14-routing.routes')
+        .then(m => m.T14_ROUTES)
   },
- 
+
+  // ALL TASK/SMALL PROJECTS
+  {
+    path: 'task01',
+    loadComponent: () =>
+      import('./task01-counter-app/task01-counter-app')
+        .then(m => m.Task01CounterApp)
+  },
+  {
+    path: 'task02',
+    loadComponent: () =>
+      import('./task02-todo-list/task02-todo-list')
+        .then(m => m.Task02TodoList)
+  },
 ];

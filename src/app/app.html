@@ -1,32 +1,50 @@
-<!-- <app-t01-interpolation></app-t01-interpolation> -->
+<div class="layout">
+  <!-- Sidebar -->
+  @if (sidebarOpen()) {
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <strong>{{ title() }}</strong>
+      <button (click)="toggleSidebar()">✖</button>
+    </div>
 
-<!-- <app-t02-function-call></app-t02-function-call> -->
+    <hr />
 
-<!-- <app-t03-data-type></app-t03-data-type> -->
+    <!-- Tutorial Dropdown -->
+    <details>
+      <summary>Tutorial</summary>
+      <a routerLink="/t01">T01 Interpolation</a>
+      <a routerLink="/t02">T02 Function</a>
+      <a routerLink="/t03">T03 Data Type</a>
+      <a routerLink="/t04">T04 Events</a>
+      <a routerLink="/t05">T05 Get & Set</a>
+      <a routerLink="/t06">T06 If Else</a>
+      <a routerLink="/t07">T07 Else If</a>
+      <a routerLink="/t08">T08 Switch</a>
+      <a routerLink="/t09">T09 For Loop</a>
+      <a routerLink="/t10">T10 Signals</a>
+      <a routerLink="/t11">T11 Effects</a>
+      <a routerLink="/t12">T12 Two Way</a>
+      <a routerLink="/t13">T13 Directives</a>
+      <a routerLink="/t14">T14 Routing</a>
+    </details>
 
-<!-- <app-task01-counter-app></app-task01-counter-app> -->
+    <details>
+      <summary>Task</summary>
+      <a routerLink="/task01">Task01 Counter</a>
+      <a routerLink="/task02">Task02 Todo</a>
+    </details>
+  </aside>
+  }
 
-<!-- <app-t04-events></app-t04-events> -->
+  <!-- Content -->
+  <main class="content">
+    <!-- Menu Button (visible when sidebar closed) -->
+    @if (!sidebarOpen()) {
+    <button (click)="toggleSidebar()">☰ Menu</button>
+    <hr />
+    }
 
-<!-- <app-t05-get-and-set-values></app-t05-get-and-set-values> -->
-
-<!-- <app-t06-if-else></app-t06-if-else> -->
-
-<!-- <app-t07-else-if></app-t07-else-if> -->
-
-<!-- <app-t08-switch-case></app-t08-switch-case> -->
-
-<!-- <app-t09-for-loop></app-t09-for-loop> -->
-
-<!-- <app-t10-signals></app-t10-signals> -->
-
-<!-- <app-t11-effects></app-t11-effects> -->
-
-<!-- <app-t12-two-way-binding></app-t12-two-way-binding> -->
-
-<!-- <app-task02-todo-list></app-task02-todo-list> -->
-
-<!-- <app-t13-directives></app-t13-directives> -->
-
-<app-t14-routing></app-t14-routing>
-
+    <router-outlet></router-outlet>
+  </main>
+</div>
