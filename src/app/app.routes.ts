@@ -90,6 +90,15 @@ export const routes: Routes = [
       import('./t14-routing/t14-routing.routes')
         .then(m => m.T14_ROUTES)
   },
+  {
+    path:'t15',
+    loadComponent:() =>
+      import('./t15-header-with-routing/t15-header-with-routing')
+      .then(m => m.T15HeaderWithRouting),
+      loadChildren:() =>
+        import('./t15-header-with-routing/t15-header-with-routing.routes')
+        .then(m => m.T15_HeaderWithRouting)
+  },
 
   // ALL TASK/SMALL PROJECTS
   {
