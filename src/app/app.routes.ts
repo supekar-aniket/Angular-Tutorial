@@ -99,6 +99,15 @@ export const routes: Routes = [
         import('./t15-header-with-routing/t15-header-with-routing.routes')
         .then(m => m.T15_HeaderWithRouting)
   },
+  {
+    path:'t16',
+    loadComponent:() => 
+      import('./t16-page-404/t16-page-404')
+      .then(m => m.T16Page404),
+      loadChildren:() =>
+        import('./t16-page-404/t16-page-404.routes')
+        .then(m => m.T16_PAGE404)
+  },
 
   // ALL TASK/SMALL PROJECTS
   {
