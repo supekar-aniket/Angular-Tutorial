@@ -108,6 +108,12 @@ export const routes: Routes = [
         import('./t16-page-404/t16-page-404.routes')
         .then(m => m.T16_PAGE404)
   },
+  {
+    path:'t17',
+    loadComponent:() => 
+      import('./t17-data-passing-bet-pages/t17-data-passing-bet-pages')
+      .then(x => x.T17DataPassingBetPages),
+  },
 
   // ALL TASK/SMALL PROJECTS
   {

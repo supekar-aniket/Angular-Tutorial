@@ -1,0 +1,129 @@
+<div class="parent">
+
+  <h1 class="header">PARENT COMPONENT</h1>
+  <p class="para">This is parent content:</p>
+  <button (click)="sendToChild1()">Send data to Child-1</button>
+  <h3 class="para">Child says:{{msg1}}</h3>
+
+  <div class="children">
+    <div class="c1">
+      <app-child-1 [parentData]="dataForChild1" (dataFromChild1)="receiveData($event)"></app-child-1>
+    </div>
+
+    <div class="c2">
+      <app-child-2 (event)="receiveMSG($event)" [child1Data]="sharedData"></app-child-2>
+    </div>
+  </div>
+
+<div>
+  <h1>Data Passing between Components:</h1>
+
+  <ul>
+    <ol>
+      <!-- Parent to Child -->
+      <li><strong>Parent to Child:</strong></li>
+      <ol>
+        <li>Child-1.ts</li>
+        <ul>
+          <li>Declare a @Input() property with data type string.</li>
+          <li>Add a blank constructor.</li>
+          <li>Write a blank ngOnInit() method.</li>
+        </ul>
+
+        <li>Child-1.html</li>
+        <ul>
+          <li>Print the received message variable.</li>
+        </ul>
+
+        <li>Parent.html</li>
+        <ul>
+          <li>Bind the property in the opening tag of the child component using property binding.</li>
+        </ul>
+      </ol>
+
+      <!-- Child to Parent -->
+      <li><strong>Child to Parent:</strong></li>
+      <ol>
+        <li>Child-1.ts</li>
+        <ul>
+          <li>Import Output and EventEmitter.</li>
+          <li>Declare an @Output() property.</li>
+          <li>Initialize EventEmitter.</li>
+          <li>Create a method to emit data.</li>
+        </ul>
+
+        <li>Child-1.html</li>
+        <ul>
+          <li>Create a button.</li>
+          <li>Call the emit method on button click.</li>
+        </ul>
+
+        <li>Parent.html</li>
+        <ul>
+          <li>Bind the custom event in the child component tag.</li>
+        </ul>
+
+        <li>Parent.ts</li>
+        <ul>
+          <li>Create a method to receive data from child using $event.</li>
+        </ul>
+      </ol>
+
+      <!-- Child to Child -->
+      <li><strong>Child-1 to Child-2 (Sibling Communication):</strong></li>
+      <ol>
+        <li>Child-1.ts</li>
+        <ul>
+          <li>Emit data to the parent using @Output().</li>
+        </ul>
+
+        <li>Parent.ts</li>
+        <ul>
+          <li>Receive data from Child-1 and store it.</li>
+        </ul>
+
+        <li>Parent.html</li>
+        <ul>
+          <li>Pass stored data to Child-2 using property binding.</li>
+        </ul>
+
+        <li>Child-2.ts</li>
+        <ul>
+          <li>Declare an @Input() property to receive data.</li>
+        </ul>
+
+        <li>Child-2.html</li>
+        <ul>
+          <li>Display the received data.</li>
+        </ul>
+      </ol>
+
+      <!-- Child-2 to Parent -->
+      <li><strong>Child-2 to Parent:</strong></li>
+      <ol>
+        <li>Child-2.ts</li>
+        <ul>
+          <li>Declare an @Output() property using EventEmitter.</li>
+          <li>Emit data to the parent.</li>
+        </ul>
+
+        <li>Child-2.html</li>
+        <ul>
+          <li>Add a button to send data.</li>
+        </ul>
+
+        <li>Parent.html</li>
+        <ul>
+          <li>Bind the event of Child-2 component.</li>
+        </ul>
+
+        <li>Parent.ts</li>
+        <ul>
+          <li>Receive and store data sent by Child-2.</li>
+        </ul>
+      </ol>
+
+    </ol>
+  </ul>
+</div>
+  
