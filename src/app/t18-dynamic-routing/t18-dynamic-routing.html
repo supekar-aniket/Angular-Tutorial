@@ -1,0 +1,101 @@
+<h2>Users List</h2>
+
+<ul>
+  <li *ngFor="let user of users">
+    <a [routerLink]="['/t18', user.id]">
+      {{ user.id }} - {{ user.name }}
+    </a>
+  </li>
+</ul>
+
+<hr>
+<div>
+  <h1>Dynamic Routing in Angular:</h1>
+
+  <ul>
+    <ol>
+      <!-- What is Dynamic Routing -->
+      <li><strong>What is Dynamic Routing:</strong></li>
+      <ul>
+        <li>Dynamic routing is used to pass values through the URL.</li>
+        <li>It allows loading different data using the same component.</li>
+        <li>Dynamic values are passed using route parameters.</li>
+        <li>Example URLs: /users/1, /users/2, /users/3</li>
+      </ul>
+
+      <br>
+
+      <!-- Why Dynamic Routing -->
+      <li><strong>Why we use Dynamic Routing:</strong></li>
+      <ul>
+        <li>To avoid creating multiple components for similar pages.</li>
+        <li>To load data dynamically based on user selection.</li>
+        <li>To pass ID or key through the URL.</li>
+        <li>Used in real-world apps like product details, user profiles.</li>
+      </ul>
+
+      <br>
+
+      <!-- How Dynamic Routing Works -->
+      <li><strong>How Dynamic Routing Works:</strong></li>
+      <ul>
+        <li>Route parameters are defined using <code>:id</code>.</li>
+        <li>Data is fetched using ActivatedRoute.</li>
+        <li>Navigation is done using routerLink with parameters.</li>
+      </ul>
+
+      <br>
+
+      <!-- Steps to Implement -->
+      <li><strong>Steps to Implement Dynamic Routing:</strong></li>
+      <ol>
+        <li>Route Configuration</li>
+        <ul>
+          <li>Define dynamic parameter in routes using <code>:id</code>.</li>
+        </ul>
+
+        <li>HTML (List Page)</li>
+        <ul>
+          <li>Create dynamic links using routerLink.</li>
+          <li>Pass ID in the URL.</li>
+        </ul>
+
+        <li>Component TS (Details Page)</li>
+        <ul>
+          <li>Import ActivatedRoute.</li>
+          <li>Read route parameter using paramMap.</li>
+          <li>Load data based on received ID.</li>
+        </ul>
+      </ol>
+
+      <br>
+
+      <!-- Example URL Flow -->
+      <li><strong>Example URL Flow:</strong></li>
+      <ul>
+        <li>/t18 → Displays Users List</li>
+        <li>/t18/1 → Displays User Details</li>
+        <li>/t18/5 → Displays Another User Details</li>
+      </ul>
+
+      <br>
+
+      <!-- Advantages -->
+      <li><strong>Advantages of Dynamic Routing:</strong></li>
+      <ul>
+        <li>Reduces number of components.</li>
+        <li>Makes application scalable.</li>
+        <li>Improves URL readability.</li>
+        <li>Easy navigation and bookmarking.</li>
+      </ul>
+
+      <br>
+
+      <!-- One Line Summary -->
+      <li><strong>One Line Summary:</strong></li>
+      <ul>
+        <li>Dynamic routing allows Angular applications to load data dynamically using URL parameters.</li>
+      </ul>
+    </ol>
+  </ul>
+</div>

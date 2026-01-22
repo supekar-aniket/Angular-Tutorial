@@ -1,0 +1,18 @@
+<h2>User Details</h2>
+
+<div *ngIf="user; else notFound">
+  <p><b>ID:</b> {{ user.id }}</p>
+  <p><b>Name:</b> {{ user.name }}</p>
+  <p><b>Age:</b> {{ user.age }}</p>
+  <p><b>Address:</b> {{ user.address }}</p>
+  <p><b>Email:</b> {{ user.email }}</p>
+
+  <br>
+  <button (click)="goBack()">⬅ Back to Users List</button>
+</div>
+
+<ng-template #notFound>
+  <p style="color:red;">User not found ❌</p>
+  <button (click)="goBack()">⬅ Back to Users List</button>
+</ng-template>
+

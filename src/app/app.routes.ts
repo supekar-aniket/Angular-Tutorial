@@ -112,7 +112,13 @@ export const routes: Routes = [
     path:'t17',
     loadComponent:() => 
       import('./t17-data-passing-bet-pages/t17-data-passing-bet-pages')
-      .then(x => x.T17DataPassingBetPages),
+      .then(x => x.T17DataPassingBetPages)
+  },
+  {
+    path:'t18',
+      loadChildren:() =>
+        import('./t18-dynamic-routing/t18-dynamic-routing.routes') // import route file
+        .then(x => x.T18_ROUTES)
   },
 
   // ALL TASK/SMALL PROJECTS
