@@ -10,9 +10,6 @@ import { Child2 } from "./child-2/child-2";
 })
 export class T17DataPassingBetPages {
 
-  // Child-1
-  msg = "Welcome to Angular Tutorial...!";
-
   // Child-2
   msg1 = ""
   receiveMSG($event:string){

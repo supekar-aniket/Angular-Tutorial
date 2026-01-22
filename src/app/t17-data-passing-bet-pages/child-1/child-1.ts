@@ -8,13 +8,6 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChange, SimpleCha
 })
 export class Child1 {
 
-  @Input() data!:string;
-
-  constructor(){}
-
-  ngOnInit():void{
-  }
-
   @Output() dataFromChild1 = new EventEmitter<string>();
 
   sendData(){
