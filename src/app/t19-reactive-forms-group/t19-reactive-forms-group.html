@@ -9,3 +9,100 @@
 
     <button type="button" (click)="setValue()">Set Default Value</button>
 </form>
+
+<hr>
+
+<div>
+  <h1>Reactive FormGroup in Angular:</h1>
+
+  <ul>
+    <ol>
+      <!-- What is FormGroup -->
+      <li><strong>What is FormGroup:</strong></li>
+      <ul>
+        <li>FormGroup is a collection of FormControl objects.</li>
+        <li>It represents the entire form in reactive forms.</li>
+        <li>FormGroup tracks value and validation state of the form.</li>
+        <li>It is defined in the component TypeScript file.</li>
+      </ul>
+
+      <br>
+
+      <!-- Why FormGroup -->
+      <li><strong>Why we use FormGroup:</strong></li>
+      <ul>
+        <li>To manage multiple form controls together.</li>
+        <li>To apply validations at form level.</li>
+        <li>To handle complex and dynamic forms.</li>
+        <li>To get full control over form data and state.</li>
+      </ul>
+
+      <br>
+
+      <!-- How FormGroup Works -->
+      <li><strong>How FormGroup Works:</strong></li>
+      <ul>
+        <li>FormGroup contains one or more FormControl.</li>
+        <li>Each FormControl represents an input field.</li>
+        <li>FormGroup is bound to HTML using formGroup directive.</li>
+        <li>Inputs are connected using formControlName.</li>
+      </ul>
+
+      <br>
+
+      <!-- Steps to Implement FormGroup -->
+      <li><strong>Steps to Implement Reactive FormGroup:</strong></li>
+      <ol>
+        <li>Module Configuration</li>
+        <ul>
+          <li>Import ReactiveFormsModule.</li>
+        </ul>
+
+        <li>Component TS</li>
+        <ul>
+          <li>Import FormGroup and FormControl.</li>
+          <li>Create FormGroup object.</li>
+          <li>Define FormControl for each input field.</li>
+        </ul>
+
+        <li>HTML File</li>
+        <ul>
+          <li>Bind form using formGroup directive.</li>
+          <li>Use formControlName to connect inputs.</li>
+        </ul>
+      </ol>
+
+      <br>
+
+      <!-- Example Structure -->
+      <li><strong>Example FormGroup Structure:</strong></li>
+      <ul>
+        <li>FormGroup</li>
+        <ul>
+          <li>name → FormControl</li>
+          <li>email → FormControl</li>
+          <li>password → FormControl</li>
+        </ul>
+      </ul>
+
+      <br>
+
+      <!-- Advantages -->
+      <li><strong>Advantages of FormGroup:</strong></li>
+      <ul>
+        <li>Better control over form values and validation.</li>
+        <li>Easy to add or remove form controls dynamically.</li>
+        <li>Improves form testing and maintainability.</li>
+        <li>Suitable for large and complex forms.</li>
+      </ul>
+
+      <br>
+
+      <!-- One Line Summary -->
+      <li><strong>One Line Summary:</strong></li>
+      <ul>
+        <li>FormGroup is used in reactive forms to manage and validate multiple form controls as a single unit.</li>
+      </ul>
+    </ol>
+  </ul>
+</div>
