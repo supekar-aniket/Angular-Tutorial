@@ -1,0 +1,41 @@
+[33mcommit ac4ba867592e89b6881c5fd04a114f771f0fd257[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Thu Jan 22 15:36:36 2026 +0530
+
+    How dynamic routing works and its notes
+
+[33mcommit 272f807e3f21e8ca91a3995866dbdbfc69f1bb93[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Thu Jan 22 13:09:11 2026 +0530
+
+    made some changes in t17
+
+[33mcommit 33c77d043cf5b64b3bf40ef0146414aa91af86db[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Thu Jan 22 12:36:12 2026 +0530
+
+    Pass data between parent to child,child to child and child to parent works good
+
+[33mcommit 55eb3522ff796a7665f60951d2cc2cc93913754f[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Sat Jan 3 16:15:19 2026 +0530
+
+    Page not found working good
+
+[33mcommit 34a7a72506c7172a798d63c57768525e75d09a97[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Sat Jan 3 15:09:31 2026 +0530
+
+    Routing works fine in navbar
+
+[33mcommit f8f6966e99094d8a985526a3fdd723bbf221e4f3[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Sat Jan 3 01:07:50 2026 +0530
+
+    Add sidebar and all routing related features.
+
+[33mcommit 49da40dbfbb5f2d4691b6f3a685ec80a15346f72[m
+Author: supekar-aniket <supekaraniket34@gmail.com>
+Date:   Tue Dec 30 12:27:58 2025 +0530
+
+    Uploading upto t14 and task02

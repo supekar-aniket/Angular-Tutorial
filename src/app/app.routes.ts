@@ -120,6 +120,12 @@ export const routes: Routes = [
         import('./t18-dynamic-routing/t18-dynamic-routing.routes') // import route file
         .then(x => x.T18_ROUTES)
   },
+  {
+    path:'t19',
+    loadComponent:() =>
+      import('./t19-reactive-forms-group/t19-reactive-forms-group')
+      .then(x => x.T19ReactiveFormsGroup)
+  },
 
   // ALL TASK/SMALL PROJECTS
   {

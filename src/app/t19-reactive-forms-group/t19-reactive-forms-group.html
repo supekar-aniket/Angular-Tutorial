@@ -1,0 +1,11 @@
+<h1>Reactive forms Group Works!</h1>
+
+<form action="" method="get" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Enter Name" formControlName="name"> <br><br>
+    <input type="email" placeholder="Enter Email" formControlName="email"> <br><br>
+    <input type="password" placeholder="Enter Password" formControlName="password"> <br><br>
+
+    <button>Submit</button> <br><br>
+
+    <button type="button" (click)="setValue()">Set Default Value</button>
+</form>
