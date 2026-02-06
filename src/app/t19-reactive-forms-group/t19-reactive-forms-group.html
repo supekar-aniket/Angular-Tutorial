@@ -1,14 +1,75 @@
 <h1>Reactive forms Group Works!</h1>
 
-<form action="" method="get" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="Enter Name" formControlName="name"> <br><br>
-    <input type="email" placeholder="Enter Email" formControlName="email"> <br><br>
-    <input type="password" placeholder="Enter Password" formControlName="password"> <br><br>
+<form class="form-container" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
-    <button>Submit</button> <br><br>
+  <!-- Name -->
+  <input
+    type="text"
+    placeholder="Enter Name"
+    formControlName="name"
+    class="form-input"
+    [class.invalid]="profileForm.get('name')?.touched && profileForm.get('name')?.invalid"
+  >
 
-    <button type="button" (click)="setValue()">Set Default Value</button>
+  <div class="error"
+       *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.invalid">
+    <small *ngIf="profileForm.get('name')?.errors?.['required']">
+      Name is required
+    </small>
+    <small *ngIf="profileForm.get('name')?.errors?.['maxlength']">
+      Name must be less than 50 characters
+    </small>
+  </div>
+
+  <br>
+
+  <!-- Email -->
+  <input
+    type="email"
+    placeholder="Enter Email"
+    formControlName="email"
+    class="form-input"
+    [class.invalid]="profileForm.get('email')?.touched && profileForm.get('email')?.invalid"
+  >
+
+  <div class="error"
+       *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.invalid">
+    <small *ngIf="profileForm.get('email')?.errors?.['required']">
+      Email is required
+    </small>
+    <small *ngIf="profileForm.get('email')?.errors?.['email']">
+      Enter a valid email address
+    </small>
+  </div>
+
+  <br>
+
+  <!-- Password -->
+  <input
+    type="password"
+    placeholder="Enter Password"
+    formControlName="password"
+    class="form-input"
+    [class.invalid]="profileForm.get('password')?.touched && profileForm.get('password')?.invalid"
+  >
+
+  <div class="error"
+       *ngIf="profileForm.get('password')?.touched && profileForm.get('password')?.invalid">
+    <small *ngIf="profileForm.get('password')?.errors?.['required']">
+      Password is required
+    </small>
+    <small *ngIf="profileForm.get('password')?.errors?.['minlength']">
+      Password must be at least 6 characters
+    </small>
+  </div>
+
+  <br>
+
+  <button class="btn" [disabled]="profileForm.invalid">Submit</button>
+  <button class="btn secondary" type="button" (click)="setValue()">Set Default Value</button>
+
 </form>
+
 
 <hr>
 
@@ -105,4 +166,119 @@
       </ul>
     </ol>
   </ul>
+
+  <h1>Reactive Form Validations Used in Application:</h1>
+
+  <ul>
+    <ol>
+      <!-- What are Validations -->
+      <li><strong>What are Form Validations:</strong></li>
+      <ul>
+        <li>Form validations are rules applied to input fields.</li>
+        <li>They prevent invalid or empty data submission.</li>
+        <li>In reactive forms, validations are defined in TypeScript.</li>
+      </ul>
+
+      <br>
+
+      <!-- Validators Used -->
+      <li><strong>Validators Used in This Form:</strong></li>
+      <ul>
+        <li>required</li>
+        <li>maxlength</li>
+        <li>email</li>
+        <li>minlength</li>
+      </ul>
+
+      <br>
+
+      <!-- Required Validator -->
+      <li><strong>Required Validator:</strong></li>
+      <ul>
+        <li>Ensures the input field is not left empty.</li>
+        <li>Used for name, email, and password fields.</li>
+        <li>Error message is shown when the field is touched and empty.</li>
+      </ul>
+
+      <br>
+
+      <!-- MaxLength Validator -->
+      <li><strong>MaxLength Validator:</strong></li>
+      <ul>
+        <li>Limits the maximum number of characters allowed.</li>
+        <li>Used for the name field.</li>
+        <li>Prevents very long or invalid names.</li>
+      </ul>
+
+      <br>
+
+      <!-- Email Validator -->
+      <li><strong>Email Validator:</strong></li>
+      <ul>
+        <li>Checks whether the entered value is a valid email format.</li>
+        <li>Used only for the email field.</li>
+        <li>Prevents incorrect email addresses.</li>
+      </ul>
+
+      <br>
+
+      <!-- MinLength Validator -->
+      <li><strong>MinLength Validator:</strong></li>
+      <ul>
+        <li>Ensures minimum required characters are entered.</li>
+        <li>Used for the password field.</li>
+        <li>Improves password security.</li>
+      </ul>
+
+      <br>
+
+      <!-- Error Message Display -->
+      <li><strong>Error Message Display Logic:</strong></li>
+      <ul>
+        <li>Error messages are displayed using *ngIf.</li>
+        <li>Errors are shown only when the field is touched.</li>
+        <li>Uses the errors property of FormControl.</li>
+      </ul>
+
+      <br>
+
+      <!-- Submit Button Validation -->
+      <li><strong>Submit Button Validation:</strong></li>
+      <ul>
+        <li>Submit button is disabled when the form is invalid.</li>
+        <li>Uses profileForm.invalid property.</li>
+        <li>Prevents submission of invalid form data.</li>
+      </ul>
+
+      <br>
+
+      <!-- Set Default Value -->
+      <li><strong>Set Default Value Validation:</strong></li>
+      <ul>
+        <li>setValue() method assigns values to all form controls.</li>
+        <li>All controls must receive a value.</li>
+        <li>If any control is missing, Angular throws an error.</li>
+      </ul>
+
+      <br>
+
+      <!-- Advantages -->
+      <li><strong>Advantages of Reactive Form Validations:</strong></li>
+      <ul>
+        <li>Centralized validation logic.</li>
+        <li>Easy to manage and test.</li>
+        <li>Provides better user experience.</li>
+        <li>Suitable for real-world applications.</li>
+      </ul>
+
+      <br>
+
+      <!-- One Line Summary -->
+      <li><strong>One Line Summary:</strong></li>
+      <ul>
+        <li>Reactive form validations ensure only valid and secure data is submitted by applying rules to form controls.</li>
+      </ul>
+    </ol>
+  </ul>
+
 </div>

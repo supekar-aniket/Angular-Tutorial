@@ -1,0 +1,52 @@
+/* Form container */
+.form-container {
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Input fields */
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Invalid input border */
+.form-input.invalid {
+  border-color: red;
+  background-color: #fff5f5;
+}
+
+/* Error messages */
+.error small {
+  color: red;
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background-color: #555;
+}
+
+.btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
