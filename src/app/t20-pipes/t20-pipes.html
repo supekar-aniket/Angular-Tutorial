@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+
+<h2>String Pipes :</h2>
+<h3>Lowercase : {{username | lowercase}}</h3>
+<h3>Uppercase : {{username | uppercase}}</h3>
+<h3>Titlecase : {{username | titlecase}}</h3>
+<hr>
+
+<h2>Date Pipes :</h2>
+<h3>Original Date : {{date}}</h3>
+<h3>Full Date : {{date | date:'fullDate'}}</h3>
+<h3>Short Date : {{date | date:'short'}}</h3>
+<h3>Normal Date : {{date | date}}</h3>
+<h3>Custom Date : {{date | date:'dd-MM-yy'}}</h3>
+<h3>Custom Date : {{date | date:'dd-MMM-yy'}}</h3>
+<h3>Custom Date : {{date | date:'dd-MMM-yyyy'}}</h3>
+<h3>Custom Date : {{date | date:'dd-MM-yyyy'}}</h3>
+<h3>Time : {{date | date:'hh-mm-ss'}}</h3>
+<h3>Date and Time : {{date | date:'dd-MM-yyyy hh-mm-ss'}}</h3>
+<hr>
+
+<h2>Number Pipes :</h2>
+<h3>Number : {{price}}</h3>
+<h3>Number (2 decimal) : {{price | number:'1.2-2'}}</h3>
+<h3>Currency US : {{price | currency}}</h3>
+<h3>Currency India : {{price | currency:'INR'}}</h3>
+<h3>Currency Europ : {{price | currency:'EUR'}}</h3>
+<hr>
+
+<h2>JSON Pipes :</h2>
+<h3>User Detais : {{user}}</h3>
+<h3>User Detais : {{user | json}}</h3>
+<hr>
+
+<h2>Slice Pipes :</h2>
+<h3>Users : {{users}}</h3>
+<h3>Users First Two : {{users | slice:0:2}}</h3>
+<h3>Users Last Two: {{users | slice:2}}</h3>
+<h3>Users 2-3: {{users | slice:1:3}}</h3>
+<hr>
+
+<hr>

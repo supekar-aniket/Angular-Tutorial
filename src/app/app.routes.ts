@@ -126,6 +126,12 @@ export const routes: Routes = [
       import('./t19-reactive-forms-group/t19-reactive-forms-group')
       .then(x => x.T19ReactiveFormsGroup)
   },
+  {
+    path:'t20',
+    loadComponent:() =>
+      import('./t20-pipes/t20-pipes')
+      .then(x => x.T20Pipes)
+  },
 
   // ALL TASK/SMALL PROJECTS
   {
