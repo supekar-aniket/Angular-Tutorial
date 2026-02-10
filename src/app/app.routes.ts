@@ -132,6 +132,12 @@ export const routes: Routes = [
       import('./t20-pipes/t20-pipes')
       .then(x => x.T20Pipes)
   },
+  {
+    path:'t21',
+    loadComponent:() =>
+      import('./t21-custom-pipes/t21-custom-pipes')
+    .then(x => x.T21CustomPipes)
+  },
 
   // ALL TASK/SMALL PROJECTS
   {

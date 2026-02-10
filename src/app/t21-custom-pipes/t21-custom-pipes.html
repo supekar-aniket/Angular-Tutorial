@@ -1,0 +1,157 @@
+
+<h1 class="title">Custom Pipe in Angular</h1>
+
+<h2 class="subtitle">Employee List</h2>
+
+<div class="table-wrapper">
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name | napipe | titlecasePipe}}</td>
+        <td>{{ emp.email | lowercasePipe | napipe}}</td>
+        <td>{{ emp.age | napipe}}</td>
+        <td>{{ emp.city | uppercasePipe | napipe}}</td>
+        <td>{{ emp.role | napipe}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<div>
+  <h1>Pipes and Custom Pipes in Angular:</h1>
+
+  <ul>
+    <ol>
+      <!-- What are Pipes -->
+      <li><strong>What are Pipes:</strong></li>
+      <ul>
+        <li>Pipes are used to transform data before displaying it in the view.</li>
+        <li>They do not change the original data.</li>
+        <li>Pipes are used only in HTML templates.</li>
+        <li>Pipes use the pipe ( | ) symbol.</li>
+      </ul>
+
+      <br>
+
+      <!-- Why Pipes -->
+      <li><strong>Why we use Pipes:</strong></li>
+      <ul>
+        <li>To format data easily in the template.</li>
+        <li>To keep HTML clean and readable.</li>
+        <li>To reuse formatting logic.</li>
+        <li>To avoid writing extra code in the component.</li>
+      </ul>
+
+      <br>
+
+      <!-- Built-in Pipes -->
+      <li><strong>Built-in Pipes in Angular:</strong></li>
+      <ul>
+        <li>date - formats date values.</li>
+        <li>uppercase - converts text to uppercase.</li>
+        <li>lowercase - converts text to lowercase.</li>
+        <li>titlecase - converts text to title case.</li>
+        <li>currency - formats number as currency.</li>
+        <li>percent - converts number to percentage.</li>
+      </ul>
+
+      <br>
+
+      <!-- Pipe Syntax -->
+      <li><strong>Pipe Syntax:</strong></li>
+      <ul>
+        <li>Pipes are applied using the | symbol.</li>
+        <li>Multiple pipes can be chained together.</li>
+        <li>Pipe arguments are passed using colon (:).</li>
+      </ul>
+
+      <br>
+
+      <!-- Custom Pipes -->
+      <li><strong>What is a Custom Pipe:</strong></li>
+      <ul>
+        <li>Custom pipe is a user-defined pipe.</li>
+        <li>It is used when built-in pipes are not sufficient.</li>
+        <li>Custom pipes are created using Pipe decorator.</li>
+        <li>They contain a transform() method.</li>
+      </ul>
+
+      <br>
+
+      <!-- Why Custom Pipes -->
+      <li><strong>Why we use Custom Pipes:</strong></li>
+      <ul>
+        <li>To apply custom formatting logic.</li>
+        <li>To reuse custom transformation logic.</li>
+        <li>To keep templates clean.</li>
+        <li>To follow separation of concerns.</li>
+      </ul>
+
+      <br>
+
+      <!-- Steps to Create Custom Pipe -->
+      <li><strong>Steps to Create a Custom Pipe:</strong></li>
+      <ol>
+        <li>Create Pipe</li>
+        <ul>
+          <li>Use @Pipe decorator.</li>
+          <li>Provide a unique pipe name.</li>
+        </ul>
+
+        <li>Implement PipeTransform</li>
+        <ul>
+          <li>Implement PipeTransform interface.</li>
+          <li>Define transform() method.</li>
+        </ul>
+
+        <li>Use Pipe in HTML</li>
+        <ul>
+          <li>Apply pipe using | symbol.</li>
+        </ul>
+      </ol>
+
+      <br>
+
+      <!-- Example Custom Pipe -->
+      <li><strong>Example Custom Pipe Use Case:</strong></li>
+      <ul>
+        <li>Convert empty or null value to 'N/A'.</li>
+        <li>Format user name.</li>
+        <li>Custom text transformation.</li>
+      </ul>
+
+      <br>
+
+      <!-- Advantages -->
+      <li><strong>Advantages of Pipes:</strong></li>
+      <ul>
+        <li>Reusable and clean code.</li>
+        <li>Improves readability.</li>
+        <li>Easy to maintain.</li>
+        <li>Separates logic from template.</li>
+      </ul>
+
+      <br>
+
+      <!-- One Line Summary -->
+      <li><strong>One Line Summary:</strong></li>
+      <ul>
+        <li>Pipes transform data in Angular templates, and custom pipes allow developers to define their own data transformations.</li>
+      </ul>
+    </ol>
+  </ul>
+</div>
