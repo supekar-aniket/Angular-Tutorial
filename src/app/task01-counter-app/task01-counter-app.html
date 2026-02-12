@@ -1,13 +1,29 @@
-<p>task01-counter-app works!</p>
+<div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
 
-<div style="text-align: center;">
-    <h1>{{appTitle}}</h1>
+  <h1 class="mb-4">{{ appTitle }}</h1>
 
-    <h1 class="displayNum">{{count}}</h1>
+  <!-- Display Number -->
+  <div class="bg-secondary text-white text-center rounded-3 mb-4 d-flex justify-content-center align-items-center"
+       style="width: 120px; height: 70px; font-size: 40px;">
+    {{ count }}
+  </div>
 
-    <div>
-        <button class="btn" (click)="countDecrement()">Decrement</button>
-        <button class="btn" (click)="countReset()">Reset</button>
-        <button class="btn" (click)="countIncrement()">Increment</button>
-    </div>
+  <!-- Buttons -->
+  <div class="d-flex gap-2">
+    <button class="btn btn-outline-danger btn-sm"
+            (click)="countDecrement()">
+      Decrement
+    </button>
+
+    <button class="btn btn-outline-secondary btn-sm"
+            (click)="countReset()">
+      Reset
+    </button>
+
+    <button class="btn btn-outline-success btn-sm"
+            (click)="countIncrement()">
+      Increment
+    </button>
+  </div>
+
 </div>

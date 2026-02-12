@@ -1,25 +1,56 @@
-<div class="todo-wrapper">
-  <h1 class="todo-title">Todo List</h1>
+<div class="container min-vh-100 d-flex flex-column align-items-center py-4 bg-light">
 
-  <div class="todo-input-row">
-    <input
-      type="text"
-      [(ngModel)]="task"
-      placeholder="Enter New Task"
-      (keyup.enter)="addTask()"
-    />
-    <button (click)="addTask()">Add Task</button>
+  <!-- Title -->
+  <h1 class="fw-bold mb-4 text-dark">Todo List</h1>
+
+  <!-- Input Row -->
+  <div class="row w-100 justify-content-center mb-4" style="max-width: 420px;">
+    <div class="col-12 col-sm-8 mb-2 mb-sm-0">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="task"
+        placeholder="Enter New Task"
+        (keyup.enter)="addTask()"
+      />
+    </div>
+    <div class="col-12 col-sm-4">
+      <button
+        class="btn btn-primary w-100"
+        (click)="addTask()"
+      >
+        Add Task
+      </button>
+    </div>
   </div>
 
-  <ul class="todo-list">
-    @for (task of taskList; track task.id;let i=$index) {
-      <li class="todo-item">
-        <span class="todo-id">{{ i+1 }}</span>
-        <span class="todo-text">{{ task.task }}</span>
-        <button class="todo-delete" (click)="deleteTask(task.id)">
-          Delete
-        </button>
+  <!-- Task List -->
+  <ul class="list-unstyled w-100" style="max-width: 420px;">
+    @for (task of taskList; track task.id; let i = $index) {
+      <li class="card shadow-sm mb-2 border-0">
+        <div class="card-body d-flex align-items-center gap-2 p-2">
+
+          <!-- ID Badge -->
+          <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">
+            {{ i + 1 }}
+          </span>
+
+          <!-- Task Text -->
+          <span class="flex-grow-1">
+            {{ task.task }}
+          </span>
+
+          <!-- Delete Button -->
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="deleteTask(task.id)"
+          >
+            Delete
+          </button>
+
+        </div>
       </li>
     }
   </ul>
+
 </div>
