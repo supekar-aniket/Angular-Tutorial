@@ -1,57 +1,65 @@
-<div class="layout">
-  <!-- Sidebar -->
-  @if (sidebarOpen()) {
-  <aside class="sidebar">
-    <!-- Sidebar Header -->
-    <div class="sidebar-header">
-      <strong>{{ title() }}</strong>
-      <button (click)="toggleSidebar()">✖</button>
+<div class="container-fluid">
+  <div class="row vh-100">
+
+    <!-- Sidebar -->
+    @if (sidebarOpen()) {
+    <div class="col-md-3 col-lg-2 bg-light border-end p-3 overflow-auto vh-100">
+
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <strong>{{ title() }}</strong>
+        <button class="btn btn-sm btn-outline-danger" (click)="toggleSidebar()">✖</button>
+      </div>
+
+      <hr>
+
+      <!-- Tutorial -->
+      <details class="mb-3">
+        <summary class="fw-bold">Tutorial</summary>
+        <a class="d-block nav-link" routerLink="/t01">T01 Interpolation</a>
+        <a class="d-block nav-link" routerLink="/t02">T02 Function</a>
+        <a class="d-block nav-link" routerLink="/t03">T03 Data Type</a>
+        <a class="d-block nav-link" routerLink="/t04">T04 Events</a>
+        <a class="d-block nav-link" routerLink="/t05">T05 Get & Set</a>
+        <a class="d-block nav-link" routerLink="/t06">T06 If Else</a>
+        <a class="d-block nav-link" routerLink="/t07">T07 Else If</a>
+        <a class="d-block nav-link" routerLink="/t08">T08 Switch</a>
+        <a class="d-block nav-link" routerLink="/t09">T09 For Loop</a>
+        <a class="d-block nav-link" routerLink="/t10">T10 Signals</a>
+        <a class="d-block nav-link" routerLink="/t11">T11 Effects</a>
+        <a class="d-block nav-link" routerLink="/t12">T12 Two Way</a>
+        <a class="d-block nav-link" routerLink="/t13">T13 Directives</a>
+        <a class="d-block nav-link" routerLink="/t14">T14 Routing</a>
+        <a class="d-block nav-link" routerLink="/t15">T15 Header with Routing</a>
+        <a class="d-block nav-link" routerLink="/t16">T16 Page Not Found</a>
+        <a class="d-block nav-link" routerLink="/t17">T17 Data Passing Bet Pages</a>
+        <a class="d-block nav-link" routerLink="/t18">T18 Dynamic Routing</a>
+        <a class="d-block nav-link" routerLink="/t19">T19 Reactive Forms Group</a>
+        <a class="d-block nav-link" routerLink="/t20">T20 Pipes in Angular</a>
+        <a class="d-block nav-link" routerLink="/t21">T21 Custom Pipes in Angular</a>
+      </details>
+
+      <!-- Task -->
+      <details>
+        <summary class="fw-bold">Task</summary>
+        <a class="d-block nav-link" routerLink="/task01">Task01 Counter</a>
+        <a class="d-block nav-link" routerLink="/task02">Task02 Todo</a>
+      </details>
+
     </div>
-
-    <hr />
-
-    <!-- Tutorial Dropdown -->
-    <details>
-      <summary>Tutorial</summary>
-      <a routerLink="/t01">T01 Interpolation</a>
-      <a routerLink="/t02">T02 Function</a>
-      <a routerLink="/t03">T03 Data Type</a>
-      <a routerLink="/t04">T04 Events</a>
-      <a routerLink="/t05">T05 Get & Set</a>
-      <a routerLink="/t06">T06 If Else</a>
-      <a routerLink="/t07">T07 Else If</a>
-      <a routerLink="/t08">T08 Switch</a>
-      <a routerLink="/t09">T09 For Loop</a>
-      <a routerLink="/t10">T10 Signals</a>
-      <a routerLink="/t11">T11 Effects</a>
-      <a routerLink="/t12">T12 Two Way</a>
-      <a routerLink="/t13">T13 Directives</a>
-      <a routerLink="/t14">T14 Routing</a>
-      <a routerLink="/t15">T15 Header with Routing</a>
-      <a routerLink="/t16">T16 Page Not Found</a>
-      <a routerLink="/t17">T17 Data Passing Bet Pages</a>
-      <a routerLink="/t18">T18 Dynamic Routing</a>
-      <a routerLink="/t19">T19 Reactive Forms Group</a>
-      <a routerLink="/t20">T20 Pipes in Angular</a>
-      <a routerLink="/t21">T21 Custom Pipes in Angular</a>
-    </details>
-
-    <details>
-      <summary>Task</summary>
-      <a routerLink="/task01">Task01 Counter</a>
-      <a routerLink="/task02">Task02 Todo</a>
-    </details>
-  </aside>
-  } 
-
-  <!-- Content -->
-  <main class="content">
-    <!-- Menu Button (visible when sidebar closed) -->
-    @if (!sidebarOpen()) {
-    <button (click)="toggleSidebar()">☰ Menu</button>
-    <hr />
     }
 
-    <router-outlet></router-outlet>
-  </main>
+    <!-- Content -->
+    <div class="col p-4 overflow-auto vh-100">
+
+      @if (!sidebarOpen()) {
+      <button class="btn btn-primary mb-2" (click)="toggleSidebar()">☰ Menu</button>
+      <hr>
+      }
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
 </div>
