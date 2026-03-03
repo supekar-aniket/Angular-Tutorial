@@ -152,4 +152,12 @@ export const routes: Routes = [
       import('./task02-todo-list/task02-todo-list')
         .then(m => m.Task02TodoList)
   },
+
+  // Practice Sets
+  {
+    path:'pract01',
+    loadComponent:() =>
+      import('./pract01-components/pract01-components')
+      .then(x => x.Pract01Components)
+  },
 ];
